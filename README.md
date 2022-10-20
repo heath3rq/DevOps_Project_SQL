@@ -1,6 +1,8 @@
 # Project-3-Heather-Qiu
 [![CLI](https://github.com/nogibjj/hq-individual_project3/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/hq-individual_project3/actions/workflows/main.yml)
 
+[![Codespaces Prebuilds](https://github.com/nogibjj/hq-individual_project3/workflows/codespaces/create_codespaces_prebuilds/badge.svg)](https://github.com/nogibjj/hq-individual_project3/actions/workflows/codespaces/create_codespaces_prebuilds)
+
 
 ## Project Description
 
