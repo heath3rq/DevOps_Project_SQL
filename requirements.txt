@@ -4,6 +4,7 @@ click
 fastapi
 uvicorn[standard]
 pandas
+faker
 
 ##MLOps-HuggingFace
 transformers==4.22.2
