@@ -1,0 +1,11 @@
+pytest
+pylint
+click
+fastapi
+uvicorn[standard]
+pandas
+
+##MLOps-HuggingFace
+transformers==4.22.2
+datasets==2.5.2
+tokenizers==0.12.1
