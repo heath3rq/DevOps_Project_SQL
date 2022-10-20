@@ -7,7 +7,7 @@ names = [faker.name().split() for _ in range(1000)]
 names = [name for name in names if len(name) == 2]
 
 ##Create table in data.db
-#connection = sqlite3.connect('data.db')
+# connection = sqlite3.connect('test.db')
 # table = 'CREATE TABLE users (id INTEGER PRIMARY KEY, first_name TEXT, last_name TEXT)'
 # cursor = connection.cursor()
 # cursor.execute(table)
