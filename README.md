@@ -4,7 +4,11 @@
 
 ## Project Description
 
-The project is for IDS 706 Data Engineering class at Duke University. The goal is to build a Bash Command Line tool that performs useful data preparation tasks such as cleaning, truncating, and sorting data. For the scope of this project, I built a Bash Command Line tool that removes empty lines from a CSV file. It then filters the file by detecting differences between the user-specified columns and only returns rows with a difference. I designed the tool in the hope of automating everyday data preparation tasks. The bash script can be easily scaled up to incorporate additional features and will be pushed to Docker Hub for accessibility at a later date. 
+The project is for IDS 706 Data Engineering class at Duke University. The goal is to generate a script that queries a SQL database to drive insights. While flat files such as .csv files provide a great mechanism for storing data, relational databases allow one to express items and their relationships. In this project, we will explore two ways to build and query databases to abstract useful information: SQLite and SQLAlchemy. 
+
+* SQLite is a a self-contained and serverless single file database engine. Check out [this post](https://www.w3schools.blog/sqlite-tutorial) from W3schools to learn more if you are interested. 
+
+* SQLAlchemy is a third party Python library that facilitates communication between Python programs and databases. SQLAlchemy supports many types of databases such as SQLite, Postgresql, and MySQL. Check out [this post](https://medium.com/geekculture/getting-started-with-sqlalchemy-d132d04c940) from medium.com to learn more if you are interested.  
 
 
 ## Data Flow Diagram
@@ -12,17 +16,14 @@ The project is for IDS 706 Data Engineering class at Duke University. The goal i
 
 
 ## Demo Video
-[Project 3 - Heather Qiu - Bash CLI to Clean & Filter Data - Watch Video]()
+[Project 3 - Heather Qiu - SQL in Python - Watch Video]()
 
-For the demo, I used a dataset from NYC Open Data: [Workforce1 Job Listing](https://data.cityofnewyork.us/Business/Workforce1-Job-Listing/ay9k-vznm). Out of the 197 rows in the dataset, Only 44 rows are non-blank valid entries. Furthermore, many positions have the same minimum and maximum wages, which are not helpful for exploratory data analysis. Therefore, a function is incorporated to filter valid rows if a difference is identified between the minimum and maximum wages.
+Two Kaggle datasets are used in this demo:
 
+* [Netflix Original Films & IMDB Scores](https://www.kaggle.com/datasets/luiscorter/netflix-original-films-imdb-scores): consists of all Netflix original films released as of June 1st, 2021. `netflix_mv_ratings.py` leverages SQLAlchemy to establish communication between the database, fed with data from the relative path `netflix_movie_rating.csv`, and Python programs. It then queries the database and returns results for (1) Netflix Original films with an IMDB Score Greater than 8.5 and (2) the top five Netflix Original Movie genres & their respective IMDb Scores.
 
-## Instructions To Use The CLI Tool
+* [Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows): consists of over 8000 movies or tv shows available on Neflix as of mid 2021. SQLite3 is used in `netflix_titles.py`. The script is designed to create connection, insert data, and read into `netflix_titles.db`. The built-in SQL statements then fetch results for (1) the top ten production coutnries with the most Netlfix contents and (2) a breakdown of show type by year over a 10-year period (2012 to 2021). 
 
-To run the function after cloning the repository, type in `./main.sh *filename* *col1* *col2*` where: 
+## Instructions To Replicate the Process Yourself
 
-- `filename` is the name of the file located in the same directory in which the CLI runs. The tool supports .csv files. 
-- `col1` specifies the first column index number that the function will compare from
-- `col2` specifies the second column index number that the function will compare to
-
-An example command could be `./main.sh workforce_job_listing.csv 10 11`, which would first remove empty lines from `workforce_job_listing.csv` and save them to `data_cleaned.csv`. The tool then filters the temporary file so that only rows where the values in the 10th column (the minimum wage) are different than the ones in the 11th column (the maximum wage). The results are saved in `data_filtered.csv`.
+To run the python scripts after cloning the repository, type in your terminal: `python <filename>.py`. An example is `python netflix_mv_ratings.py`, which returns results as described in the demo section. Please note that in order to run `python netflix_titles.py`, you will need to uncomment step 3 through 8 in the respective file to build the database local to your machine.
