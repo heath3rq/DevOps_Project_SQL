@@ -12,7 +12,7 @@ The project is for IDS 706 Data Engineering class at Duke University. The goal i
 
 
 ## Data Flow Diagram
-![Project3]()
+![SQLAlchemy & SQLite](https://user-images.githubusercontent.com/105904149/198904778-5ed348a0-1c3d-408d-bdd2-1662ef5e8f62.png)
 
 
 ## Demo Video
