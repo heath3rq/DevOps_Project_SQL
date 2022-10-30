@@ -1,4 +1,4 @@
-name: CLI
+name: GitHub Action for Continuous Integration
 
 on: [push]
 
