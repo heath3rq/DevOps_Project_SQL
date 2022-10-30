@@ -24,6 +24,7 @@ Two Kaggle datasets are used in this demo:
 
 * [Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows): consists of over 8000 movies or tv shows available on Netflix as of mid 2021. `netflix_titles.py` uses SQLite3. The script is designed to create a connection, insert data, and read into `netflix_titles.db`. The built-in SQL statements then fetch results for (1) the top ten production countries with the most Netlfix contents and (2) a breakdown of show type by year over ten years (2012 to 2021). 
 
+
 ## Instructions To Replicate the Process Yourself
 
 To run the python scripts after cloning the repository, type in your terminal: `python <filename>.py`. An example is `python netflix_mv_ratings.py`, which returns results described in the demo section. Please note that to run `python netflix_titles.py` you need to uncomment steps 3 through 8 in the respective file to build the database local to your machine.
