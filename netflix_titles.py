@@ -43,7 +43,8 @@ cursor = connection.cursor()
 # cursor.executemany(insert_records, contents)
 
 ## Step 9: Query the nfxtitle table
-### Query 1: Find Netflix Original Films with an IMDB Score Greater than 8.5
+
+### Query 1: Find top ten production countries with the most Netlfix contents
 query1 = """SELECT Distinct country, count(title) 
 		   FROM nfxtitle
 		   WHERE country != ''
@@ -51,7 +52,7 @@ query1 = """SELECT Distinct country, count(title)
 		   Order by count(title) DESC
 		   LIMIT 10;"""
 top10_production_country = cursor.execute(query1).fetchall()
-### Query 2: Find the top five genre with the highest IMDB Score from Netflix Original Movies
+### Query 2: Find breakdown of show type by year over ten years (2012 to 2021)
 query2 = """SELECT Distinct type, release_year, count(title)
 		   FROM nfxtitle
 		   WHERE release_year != '' 
