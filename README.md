@@ -16,7 +16,7 @@ The project is for IDS 706 Data Engineering class at Duke University. The goal i
 
 
 ## Demo Video
-[Project 3 - Heather Qiu - SQL in Python - Watch Video]()
+[Project 3 - Heather Qiu - SQL in Python - Watch Video](https://youtu.be/m2qZnPyXZIQ)
 
 Two Kaggle datasets are used in this demo:
 
