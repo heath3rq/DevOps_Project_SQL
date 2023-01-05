@@ -4,7 +4,7 @@
 
 ## Project Description
 
-The project is for IDS 706 Data Engineering class at Duke University. The goal is to generate a script that queries a SQL database to drive insights. While flat files such as .csv files provide an excellent mechanism for storing data, relational databases allow one to express items and their relationships. In this project, we will explore two ways to build and query databases to extract useful information: SQLite and SQLAlchemy.
+The project is done for IDS 706 Data Engineering class at Duke University. The goal is to generate a script that queries a SQL database to drive insights. While flat files such as .csv files provide an excellent mechanism for storing data, relational databases allow one to express items and their relationships. In this project, we will explore two ways to build and query databases to extract useful information: SQLite and SQLAlchemy.
 
 * SQLite is a self-contained and serverless single-file database engine. Check out [this post](https://www.w3schools.blog/sqlite-tutorial) from W3schools to learn more if you are interested. 
 
